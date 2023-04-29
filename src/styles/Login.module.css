@@ -1,0 +1,92 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    flex-direction: column;
+    z-index: 10000;
+    background: var( --bg-background-dark);
+}
+
+.Box{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px 40px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: var(  --bg-primary-color);
+    border-radius: 10px;
+}
+
+.Box h2{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size:2.6rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.Inputs_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Inputs_Container input{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size:17px;
+    border-bottom: 1px solid var( --highlight-dark-text);
+    color: var(--main-text-light);
+    width: 100%;
+    outline: none;
+    margin-top: 30px;
+}
+
+
+/* .Inputs_Container button{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size:var(--font-size-medium);
+    background: #007bff;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+} */
+
+.Login_Option{
+    font-size: var(--font-size-medium);
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.Login_Option{
+   color:var(--highlight-dark-text);
+   font-size: 16px;
+}
+
+
+.Login_Option span{
+    color: #007bff ;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+}
