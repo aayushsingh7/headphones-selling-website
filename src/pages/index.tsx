@@ -27,7 +27,7 @@ const index: FC<indexProps> = ({data}) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    let data = await fetch("http://localhost:3000/api/getAllProducts");
+    let data = await fetch("https://tiny-moxie-58820c.netlify.app/api/getAllProducts");
     let response = await data.json();
     console.log(response)
     return {

@@ -15,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loadingTxt?: string;
   className?: string;
   authReq?: boolean;
+  pointerEvent?:string
 }
 
 const Button: FC<ButtonProps> = ({
@@ -29,11 +30,13 @@ const Button: FC<ButtonProps> = ({
   marginTop,
   padding,
   borderRadius,
+  pointerEvent,
   ...props
 }) => {
   const user = useSelector((state: RootState) => {
     return state.user;
   });
+
 
   return authReq ? (
    typeof  user._id === typeof "user_id" ? (
@@ -46,6 +49,7 @@ const Button: FC<ButtonProps> = ({
           marginTop: marginTop,
           borderRadius: borderRadius,
           padding: padding,
+          pointerEvents:isLoading ? "none" : "auto"
         }}
         {...props}
       >
@@ -62,6 +66,7 @@ const Button: FC<ButtonProps> = ({
             marginTop: marginTop,
             borderRadius: borderRadius,
             padding: padding,
+            pointerEvents:isLoading ? "none" : "auto"
           }}
           {...props}
         >
@@ -79,6 +84,7 @@ const Button: FC<ButtonProps> = ({
         marginTop: marginTop,
         borderRadius: borderRadius,
         padding: padding,
+        pointerEvents:isLoading ? "none" : "auto"
       }}
       {...props}
     >

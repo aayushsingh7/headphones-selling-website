@@ -11,19 +11,19 @@ const ProductSlider: FC<ProductSliderProps> = ({ productData }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 11,
+      items: 6,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1200 },
+      breakpoint: { max: 3000, min: 1400 },
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1200, min: 650 },
+      breakpoint: { max: 1400, min: 750 },
       items: 3,
     },
     mobile: {
-      breakpoint: { max: 650, min: 450 },
-      items: 3,
+      breakpoint: { max: 750, min: 450 },
+      items: 2,
     },
     mobile2: {
       breakpoint: { max: 450, min: 0 },

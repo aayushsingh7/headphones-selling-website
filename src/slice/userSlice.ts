@@ -5,7 +5,7 @@ export const fetchUser = createAsyncThunk(
   "/users/getUserData",
   async (thunkApi) => {
     const response = await fetch(
-      "http://localhost:3000/api/checkUserLoggedIn",
+      "https://tiny-moxie-58820c.netlify.app/api/checkUserLoggedIn",
       { method: "GET", credentials: "include" }
     );
     const data = await response.json();

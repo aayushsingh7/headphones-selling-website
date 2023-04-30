@@ -11,7 +11,7 @@ const Logout: FC<LogoutProps> = ({}) => {
         const logoutUser = async()=> {
             try {
            Cookies.remove('jwt')
-                 const logout = await fetch('http://localhost:3000/api/logout',{method:"GET",credentials:"include"})
+                 const logout = await fetch('https://tiny-moxie-58820c.netlify.app/api/logout',{method:"GET",credentials:"include"})
                  let response = await logout.json()
                  if(logout.status === 200){
             console.log(response)

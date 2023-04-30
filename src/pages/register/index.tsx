@@ -27,7 +27,7 @@ const Index: FC<IndexProps> = ({}) => {
         e.preventDefault()
         console.log(userInput)
             setLoading(true)
-            let register = await fetch('http://localhost:3000/api/register', { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(userInput) })
+            let register = await fetch('https://tiny-moxie-58820c.netlify.app/api/register', { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(userInput) })
             let response = await register.json()
             console.log(response)
             if (register.status === 200) {

@@ -35,10 +35,11 @@ export default async function login(req: NextApiRequest , res: LoginApiResponse)
         isUserExists.password
       );
       if (verifyPassword) {
+        const maxAge = 20 * 24 * 60 * 60; // 20 days in seconds
         let token = await jwt.sign(isUserExists._id.toString(), process.env.SECRET_KEY);
         res.setHeader(
           "Set-Cookie",
-          `jwt=${token}; HttpOnly; SameSite=Strict`
+          `jwt=${token}; HttpOnly;Path=/; Max-Age=${maxAge}; SameSite=Strict; Secure`
         );
         res.status(200).send({ success: true, message: "Login Successfully" });
       } else {

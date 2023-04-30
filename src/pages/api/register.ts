@@ -52,7 +52,7 @@ const register = async (req: NextApiRequest, res: NextApiResponse) => {
 
       res.setHeader(
         "Set-Cookie",
-        `jwt=${token}; HttpOnly;Path=/; Max-Age=${maxAge}; SameSite=Strict`
+        `jwt=${token}; HttpOnly;Path=/; Max-Age=${maxAge}; SameSite=Strict; Secure`
       );
 
       res.status(200).send({

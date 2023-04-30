@@ -55,7 +55,7 @@ const ProductId: FC<ProductIdProps> = ({ data }) => {
       };
       
       
-      let addItem = await fetch("http://localhost:3000/api/addToCart", {
+      let addItem = await fetch("https://tiny-moxie-58820c.netlify.app/api/addToCart", {
         method: "PUT",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -86,7 +86,7 @@ const ProductId: FC<ProductIdProps> = ({ data }) => {
     // console.log("Remove From Cart")
     try {
       setLoading(true)
-      let removeItem = await fetch("http://localhost:3000/api/removeFromCart", {
+      let removeItem = await fetch("https://tiny-moxie-58820c.netlify.app/api/removeFromCart", {
         method: "PUT",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -205,7 +205,7 @@ const ProductId: FC<ProductIdProps> = ({ data }) => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   try {
     let data = await fetch(
-      `http://localhost:3000/api/getSingleProduct/${context.query.productId}`
+      `https://tiny-moxie-58820c.netlify.app/api/getSingleProduct/${context.query.productId}`
     );
     let response = await data.json();
     // console.log(response)

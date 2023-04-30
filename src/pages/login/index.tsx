@@ -20,7 +20,7 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      let login = await fetch("http://localhost:3000/api/login", {
+      let login = await fetch("https://tiny-moxie-58820c.netlify.app/api/login", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
