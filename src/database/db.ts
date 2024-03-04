@@ -1,9 +1,9 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, MongoClientOptions } from 'mongodb';
 
 const URI = process.env.DB_URL;
-const options = {
-   useNewUrlParser: true,
-   useUnifiedTopology: true,
+const options: MongoClientOptions = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 };
 
 if (!URI) {
@@ -14,7 +14,6 @@ let client = new MongoClient(URI, options);
 let clientPromise = client.connect()
     .catch((error) => {
         throw new Error(`Error connecting to MongoDB: ${error}`);
-        process.exit(1); // This line was moved inside the catch block
     });
 
 export default clientPromise;
