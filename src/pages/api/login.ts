@@ -10,7 +10,7 @@ interface LoginApiResponse extends NextApiResponse {
 
 export default async function login(req: NextApiRequest , res: LoginApiResponse) {
 
-  if (req.method !== "POST") {
+  if (req.method !== "GET") {
     return res
       .status(405)
       .json({ success: false, message: "Method not allowed" });
