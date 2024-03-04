@@ -4,7 +4,7 @@ import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 const register = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== "POST") {
+  if (req.method !== "GET") {
     return res
       .status(405)
       .json({ success: false, message: "Method not allowed" });
